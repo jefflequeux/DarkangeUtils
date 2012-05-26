@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="NeosSdiConfiguration.Controls.CodeInspectSetting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:NeosSdiConfiguration.Controls.Helpers"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500" Name="uc1">
+    <UserControl.Resources>
+        <local:CodingRuleCaseEnumToStringConverter x:Key="CodingRuleCaseEnumConverter"/>
+            <ObjectDataProvider x:Key="SortedEnumView" MethodName="GetNames" ObjectType="{x:Type System:Enum}">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="local:CodingRuleCaseEnum"/>
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
+    </UserControl.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <ListBox Name="listOfRules" ItemsSource="{Binding Path=Rules, ElementName=uc1}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="35">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="40" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="{Binding RuleName}" VerticalAlignment="Center"></Label>
+                        <ComboBox  Grid.Column="1" VerticalAlignment="Center" ItemsSource="{Binding Source={StaticResource SortedEnumView}}" SelectedValue="{Binding RuleCase, Converter={StaticResource CodingRuleCaseEnumConverter}}"/>
+                        <Label Grid.Column="2"  Content="{Binding RuleCase, Converter={StaticResource CodingRuleCaseEnumConverter}}" Margin="15, 0, 2, 0 " VerticalAlignment="Center" />
+                        <TextBox Grid.Column="3" VerticalAlignment="Center" Margin="5" Text="{Binding RuleFirstLetter}"  ></TextBox>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Grid Grid.Row="1">
+            <Button Content="Save" VerticalAlignment="Center" HorizontalAlignment="Right" Width="100" Margin="10, 0" Click="Button_Click"></Button>
+        </Grid>
+    </Grid>
+</UserControl>

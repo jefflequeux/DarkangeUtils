@@ -1,0 +1,8 @@
+﻿<Window x:Class="LockScreen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" ResizeMode="NoResize" ShowInTaskbar="True" WindowStartupLocation="CenterScreen" Topmost="True" WindowState="Maximized" WindowStyle="None">
+    <Grid>
+        <Image Stretch="Fill" Source="/LockScreen;component/Images/Windows_Seven_wallpaper_V_2_by_Youness_toulouse.png" />
+    </Grid>
+</Window>

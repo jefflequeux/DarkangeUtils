@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartPageKalidea", "StartPageKalidea\StartPageKalidea\StartPageKalidea.csproj", "{3B92FFED-DE20-42FB-A08F-925C27AF228B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartPageKalideaControl", "StartPageKalidea\StartPageKalideaControl\StartPageKalideaControl.csproj", "{96616B2C-AA1A-4B91-9105-F96D65A1FCAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B92FFED-DE20-42FB-A08F-925C27AF228B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B92FFED-DE20-42FB-A08F-925C27AF228B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B92FFED-DE20-42FB-A08F-925C27AF228B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B92FFED-DE20-42FB-A08F-925C27AF228B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96616B2C-AA1A-4B91-9105-F96D65A1FCAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96616B2C-AA1A-4B91-9105-F96D65A1FCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96616B2C-AA1A-4B91-9105-F96D65A1FCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96616B2C-AA1A-4B91-9105-F96D65A1FCAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
